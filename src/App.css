@@ -13,12 +13,40 @@ ol, ul {
   content: "";
   display: table;
 }
+.Select {
+  font-size:25px;
+  text-align:center;
+}
+.butto {
+  width:50px;
+  height:50px;
+  padding:10px;
+  text-align: center;
+  margin-bottom: 20px;
+  color:black;
+  font-weight: 800;
+  background-color:#ddd;
+  font-size: 18px;
+  
+}
+.status:before {
+  content:""
+}
+.flex-butt {
+  display:flex;
+  justify-content: space-evenly;
 
+}
+
+ 
 .status {
   margin-bottom: 20px;
   font-size:31px;
   text-align:center;
 
+}
+.status:before {
+  content:""
 }
 .titl {
   font-size:44px;
