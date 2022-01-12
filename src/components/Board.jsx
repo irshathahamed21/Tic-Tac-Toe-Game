@@ -7,11 +7,36 @@ const[xIsNext, setXIsNext] = useState(true)
 
 
     console.log(squares)
+    let count = 0;
+    let xcount = 0;
+    
+    for(let i = 0; i < squares.length; i++){
+        if(squares[i] === null){
+            count++
+        }
+        if(squares[i] === "X" ){
+            xcount++
+        }
+        if(squares[i] === "O" ){
+            xcount++
+        }
+    }
+
     const winner = calculateWinner(squares);
     let status;
     if (winner) {
       status = 'Winner: ' + winner;
+
+      
     }
+    else if(count === 9 ){
+        status = "Select X or O"
+    }
+    else if(!winner  && xcount === 9){
+        status = "Draw"
+    }
+   
+    
 
     else {
         
@@ -48,7 +73,17 @@ const[xIsNext, setXIsNext] = useState(true)
         <>
      <div>
      < h1 className = "titl">Tic Tac Toe</h1>
+     
+
       <div className="status">{status}</div>
+      <div className="flex-butt">
+
+     
+       {xcount ? " " : <button className = "butto" onClick = {() => {setXIsNext(false)}}>X</button>}
+       {xcount ? " " : <button className = "butto" onClick = {() => {setXIsNext(false)}}>O</button>}
+    
+     </div>
+
       <div className="board-row">
         {renderSquare(0)}
         {renderSquare(1)}
