@@ -7,8 +7,8 @@ const[value, setValue] = useState(null)
     return (
         <>
         <button className = "square" 
-                onClick = { ()=> { setValue("X")  }}>
-        {value}
+                onClick = { ()=> { props.onClick()  }}>
+        {props.value}
         </button>
         </>
     )
