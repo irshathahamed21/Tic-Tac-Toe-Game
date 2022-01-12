@@ -79,7 +79,7 @@ const[xIsNext, setXIsNext] = useState(true)
       <div className="flex-butt">
 
      
-       {xcount ? " " : <button className = "butto" onClick = {() => {setXIsNext(false)}}>X</button>}
+       {xcount ? " " : <button className = "butto" onClick = {() => {setXIsNext(true)}}>X</button>}
        {xcount ? " " : <button className = "butto" onClick = {() => {setXIsNext(false)}}>O</button>}
     
      </div>
